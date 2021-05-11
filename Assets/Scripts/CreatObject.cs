@@ -15,6 +15,8 @@ public class CreatObject : MonoBehaviour
     void SpawnItem()
     {
        GameObject clone = Instantiate(myPrefab, transform.position, Quaternion.identity);
+       //  make clone objects child objects of Ground for correct positioning on ImageTarget
+       clone.transform.parent = GameObject.Find("Ground").transform;
     }
 
 }
