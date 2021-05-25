@@ -7,7 +7,7 @@ public class MenuScript : MonoBehaviour
 {
     public GameObject Menu;
 
-    public bool isPaused;
+    public static bool IsPaused;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class MenuScript : MonoBehaviour
     {
         Menu.SetActive(true);
         Time.timeScale = 0f;
-        isPaused = true;
+        IsPaused = true;
 
     }
 
@@ -26,7 +26,7 @@ public class MenuScript : MonoBehaviour
     {
         Menu.SetActive(false);
         Time.timeScale = 1f;
-        isPaused = false;
+        IsPaused = false;
     }
 
     public void RestartGame()
@@ -40,7 +40,7 @@ public class MenuScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if (IsPaused)
             {
                 ResumeGame();
             }
