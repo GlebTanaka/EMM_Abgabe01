@@ -33,6 +33,7 @@ public class MenuScript : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        IsPaused = false;
     }
 
     // Update is called once per frame
